@@ -1,2 +1,2 @@
-# analise-de-vibracao
+# Analise de Vibração
 Análise de Vibração de Motor
