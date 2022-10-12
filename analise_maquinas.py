@@ -1,19 +1,14 @@
-from statistics import mean
 from time import time
-from tkinter import ON
-from turtle import color, down
 from xml.sax import default_parser_list
 import pandas as pd
 import os, re
-from scipy.fftpack import fftshift
-#from project_func import file_reader
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 from scipy.fft import fft, fftfreq
 from scipy.signal import welch
 import numpy as np
-from sklearn.svm import OneClassSVM
 
+#Função para ler mais de um arquivo de cada vez
 def file_reader(*args, **kwargs):
     filetype = kwargs.get('filetype', None)
     columns = kwargs.get('columns', None)
@@ -126,6 +121,7 @@ def main():
         else:
             downtime += tempo_total[i]
     
+    #Cálculo do tempo ligado/desligado em minutos
     uptime = divmod(uptime, 60)
     downtime = divmod(downtime, 60)
     print(f'Tempo Ligado : {int(uptime[0])} minutos e {int(uptime[1])} segundos')
