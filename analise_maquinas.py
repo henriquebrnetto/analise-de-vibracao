@@ -1,5 +1,4 @@
 from time import time
-from xml.sax import default_parser_list
 import pandas as pd
 import os, re
 from datetime import datetime, timedelta
